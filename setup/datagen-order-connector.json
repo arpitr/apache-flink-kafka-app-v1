@@ -1,0 +1,14 @@
+{
+  "name": "datagen-order",
+  "config": {
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "kafka.topic": "order-data",
+    "schema.filename": "/opt/kafka-connect/datagen/input/order-schema.json",
+    "schema.keyfield": "order_id",
+    "max.interval": 10000,
+    "iterations": 1000000,
+    "tasks.max": "1",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+  }
+}

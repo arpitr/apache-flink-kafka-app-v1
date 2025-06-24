@@ -1,0 +1,25 @@
+{
+    "namespace": "order_mgmt",
+    "name": "order_mgmt_order_data",
+    "type": "record",
+    "fields": [
+        {
+            "name": "order_id",
+            "type": {
+                "type": "int"
+            }
+        },
+        {
+            "name": "order_amount",
+            "type": {
+                "type": "double",
+                "arg.properties": {
+                    "range": {
+                        "min": 1,
+                        "max": 10000
+                    }
+                }
+            }
+        }
+    ]
+}
